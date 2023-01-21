@@ -13,6 +13,7 @@
 		A2069DF7297B296200D3C627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2069DF5297B296200D3C627 /* Main.storyboard */; };
 		A2069DF9297B296300D3C627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2069DF8297B296300D3C627 /* Assets.xcassets */; };
 		A2069DFC297B296300D3C627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2069DFA297B296300D3C627 /* LaunchScreen.storyboard */; };
+		A2879792297BFF1A0008BEAA /* Mit dem Wind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A2879791297BFF1A0008BEAA /* Mit dem Wind.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A2069DF8297B296300D3C627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2069DFB297B296300D3C627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2069DFD297B296300D3C627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2879791297BFF1A0008BEAA /* Mit dem Wind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Mit dem Wind.mp3"; path = "../../../../../Mit dem Wind.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A2069DF8297B296300D3C627 /* Assets.xcassets */,
 				A2069DFA297B296300D3C627 /* LaunchScreen.storyboard */,
 				A2069DFD297B296300D3C627 /* Info.plist */,
+				A2879791297BFF1A0008BEAA /* Mit dem Wind.mp3 */,
 			);
 			path = UIKitTask;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2879792297BFF1A0008BEAA /* Mit dem Wind.mp3 in Resources */,
 				A2069DFC297B296300D3C627 /* LaunchScreen.storyboard in Resources */,
 				A2069DF9297B296300D3C627 /* Assets.xcassets in Resources */,
 				A2069DF7297B296200D3C627 /* Main.storyboard in Resources */,

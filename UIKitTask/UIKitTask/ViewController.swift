@@ -9,13 +9,20 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-let player = AVPlayer()
+    
+    var player = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        do {
+            if let audiopatch = Bundle.main.path(forResource: "Mit dem Wind", ofType: "mp3") {
+                try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audiopatch))
+            }
+        } catch {
+            print("Error")
+        }
+        self.player.play()
     }
-
-
 }
 
