@@ -24,5 +24,12 @@ class ViewController: UIViewController {
         }
         self.player.play()
     }
+    
+    @IBAction func playButton(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func stopButton(_ sender: UIButton) {
+    }
 }
 
