@@ -13,6 +13,9 @@
 		A2069DF7297B296200D3C627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2069DF5297B296200D3C627 /* Main.storyboard */; };
 		A2069DF9297B296300D3C627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2069DF8297B296300D3C627 /* Assets.xcassets */; };
 		A2069DFC297B296300D3C627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2069DFA297B296300D3C627 /* LaunchScreen.storyboard */; };
+		A240E77E2985305800C07856 /* Bhastet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A240E77B2985305700C07856 /* Bhastet.jpg */; };
+		A240E77F2985305800C07856 /* Anubys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A240E77C2985305700C07856 /* Anubys.jpg */; };
+		A240E7802985305800C07856 /* Ghor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A240E77D2985305700C07856 /* Ghor.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		A2069DF8297B296300D3C627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2069DFB297B296300D3C627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2069DFD297B296300D3C627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A240E77B2985305700C07856 /* Bhastet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bhastet.jpg; sourceTree = "<group>"; };
+		A240E77C2985305700C07856 /* Anubys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Anubys.jpg; sourceTree = "<group>"; };
+		A240E77D2985305700C07856 /* Ghor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ghor.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				A2069DF3297B296200D3C627 /* ViewController.swift */,
 				A2069DF5297B296200D3C627 /* Main.storyboard */,
 				A2069DF8297B296300D3C627 /* Assets.xcassets */,
+				A240E77C2985305700C07856 /* Anubys.jpg */,
+				A240E77B2985305700C07856 /* Bhastet.jpg */,
+				A240E77D2985305700C07856 /* Ghor.jpg */,
 				A2069DFA297B296300D3C627 /* LaunchScreen.storyboard */,
 				A2069DFD297B296300D3C627 /* Info.plist */,
 			);
@@ -126,8 +135,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2069DFC297B296300D3C627 /* LaunchScreen.storyboard in Resources */,
+				A240E77E2985305800C07856 /* Bhastet.jpg in Resources */,
 				A2069DF9297B296300D3C627 /* Assets.xcassets in Resources */,
 				A2069DF7297B296200D3C627 /* Main.storyboard in Resources */,
+				A240E77F2985305800C07856 /* Anubys.jpg in Resources */,
+				A240E7802985305800C07856 /* Ghor.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
