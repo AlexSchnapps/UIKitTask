@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         createEmailLabel()
         createLoginTextfield()
         createPasswordLabel()
+        createPasswordTextfield()
     }
     //MARK: - Methods
     private func createTopLabel() {
@@ -103,6 +104,15 @@ class ViewController: UIViewController {
         passwordLabel.frame = CGRect(x: 45, y: 330, width: 150, height: 30)
         view.addSubview(passwordLabel)
     }
+    
+    private func createPasswordTextfield() {
+        passwordTextfield.isSecureTextEntry = true
+        passwordTextfield.font = .systemFont(ofSize: 16)
+        passwordTextfield.frame = CGRect(x: 45, y: 350, width: 270, height: 45)
+        passwordTextfield.addLine(position: .bottom, color: .lightGray, width: 1.5)
+        view.addSubview(passwordTextfield)
+    }
+    
 }
 
 
