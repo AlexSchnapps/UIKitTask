@@ -20,10 +20,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .darkGray
+        
         // MARK: - Create segmentControl
         segmentControl = UISegmentedControl(items: self.menuArray)
         segmentControl.frame = CGRect(x: 60, y: 500, width: 250, height: 100)
-        
+        segmentControl.addTarget(self, action: #selector(selectedValue), for: .valueChanged)
+        segmentControl.backgroundColor = .lightGray
         self.view.addSubview(segmentControl)
         
         //MARK: - Image
@@ -33,6 +37,12 @@ class ViewController: UIViewController {
         self.view.addSubview(imageView)
     }
     
+    @objc func selectedValue(target: UISegmentedControl) {
+        if target == segmentControl {
+            let segmentIndex = target.selectedSegmentIndex
+            self.imageView.image = self.imageArray[segmentIndex]
+        }
+    }
     
 }
 
