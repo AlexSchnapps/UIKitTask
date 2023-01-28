@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         createSignInLabel()
         createEmailLabel()
         createLoginTextfield()
+        createPasswordLabel()
     }
     //MARK: - Methods
     private func createTopLabel() {
@@ -87,11 +88,21 @@ class ViewController: UIViewController {
     
     private func createLoginTextfield() {
         loginTextfield.keyboardType = .emailAddress
-        loginTextfield.frame = CGRect(x: 45, y: 270, width: 200, height: 50)
-        loginTextfield.addLine(position: .bottom, color: .lightGray, width: 1.0)
+        loginTextfield.font = .systemFont(ofSize: 16)
+        loginTextfield.frame = CGRect(x: 45, y: 260, width: 270, height: 45)
+        loginTextfield.addLine(position: .bottom, color: .lightGray, width: 1.5)
         view.addSubview(loginTextfield)
     }
     
+    private func createPasswordLabel() {
+        passwordLabel.text = "Password"
+        passwordLabel.textColor = .systemBlue
+        passwordLabel.font = .systemFont(ofSize: 14)
+        passwordLabel.alpha = 0.7
+        passwordLabel.textAlignment = .left
+        passwordLabel.frame = CGRect(x: 45, y: 330, width: 150, height: 30)
+        view.addSubview(passwordLabel)
+    }
 }
 
 
