@@ -45,6 +45,7 @@ class ViewController: UIViewController {
     let passwordTextfield = UITextField()
     var entryButton = UIButton()
     let faceIDSwitch = UISwitch()
+    let togglePasswordVisibilityButton = UIButton()
     
     
     
@@ -59,6 +60,7 @@ class ViewController: UIViewController {
         createFaceIDLabel()
         createFaceIDSwitch()
         createEntryButton()
+        createTogglePasswordVisibilityButton()
     }
     //MARK: - Methods
     private func createTopLabel() {
@@ -139,6 +141,15 @@ class ViewController: UIViewController {
         entryButton.frame = CGRect(x: 50, y: 500, width: 280, height: 45)
         view.addSubview(entryButton)
     }
+    
+    private func createTogglePasswordVisibilityButton() {
+        togglePasswordVisibilityButton.setImage(UIImage(named: "closedEye.png"), for: .normal)
+        togglePasswordVisibilityButton.setImage((UIImage(named: "openEye.png")), for: .highlighted)
+        togglePasswordVisibilityButton.frame = CGRect(x: 280, y: 365, width: 20, height: 20)
+        view.addSubview(togglePasswordVisibilityButton)
+        
+    }
+    
 }
 
 

@@ -13,6 +13,8 @@
 		A2069DF7297B296200D3C627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2069DF5297B296200D3C627 /* Main.storyboard */; };
 		A2069DF9297B296300D3C627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2069DF8297B296300D3C627 /* Assets.xcassets */; };
 		A2069DFC297B296300D3C627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2069DFA297B296300D3C627 /* LaunchScreen.storyboard */; };
+		A240E78329867CB500C07856 /* openEye.png in Resources */ = {isa = PBXBuildFile; fileRef = A240E78129867CB400C07856 /* openEye.png */; };
+		A240E78429867CB500C07856 /* closedEye.png in Resources */ = {isa = PBXBuildFile; fileRef = A240E78229867CB500C07856 /* closedEye.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A2069DF8297B296300D3C627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2069DFB297B296300D3C627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2069DFD297B296300D3C627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A240E78129867CB400C07856 /* openEye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openEye.png; sourceTree = "<group>"; };
+		A240E78229867CB500C07856 /* closedEye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closedEye.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				A2069DF1297B296200D3C627 /* SceneDelegate.swift */,
 				A2069DF3297B296200D3C627 /* ViewController.swift */,
 				A2069DF5297B296200D3C627 /* Main.storyboard */,
+				A240E78229867CB500C07856 /* closedEye.png */,
+				A240E78129867CB400C07856 /* openEye.png */,
 				A2069DF8297B296300D3C627 /* Assets.xcassets */,
 				A2069DFA297B296300D3C627 /* LaunchScreen.storyboard */,
 				A2069DFD297B296300D3C627 /* Info.plist */,
@@ -127,7 +133,9 @@
 			files = (
 				A2069DFC297B296300D3C627 /* LaunchScreen.storyboard in Resources */,
 				A2069DF9297B296300D3C627 /* Assets.xcassets in Resources */,
+				A240E78429867CB500C07856 /* closedEye.png in Resources */,
 				A2069DF7297B296200D3C627 /* Main.storyboard in Resources */,
+				A240E78329867CB500C07856 /* openEye.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
