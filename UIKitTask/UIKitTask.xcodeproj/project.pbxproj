@@ -15,6 +15,7 @@
 		A2069DFC297B296300D3C627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2069DFA297B296300D3C627 /* LaunchScreen.storyboard */; };
 		A240E78329867CB500C07856 /* openEye.png in Resources */ = {isa = PBXBuildFile; fileRef = A240E78129867CB400C07856 /* openEye.png */; };
 		A240E78429867CB500C07856 /* closedEye.png in Resources */ = {isa = PBXBuildFile; fileRef = A240E78229867CB500C07856 /* closedEye.png */; };
+		A240E7862986AE5500C07856 /* VCTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A240E7852986AE5500C07856 /* VCTwo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A2069DFD297B296300D3C627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A240E78129867CB400C07856 /* openEye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openEye.png; sourceTree = "<group>"; };
 		A240E78229867CB500C07856 /* closedEye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closedEye.png; sourceTree = "<group>"; };
+		A240E7852986AE5500C07856 /* VCTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A2069DEF297B296200D3C627 /* AppDelegate.swift */,
 				A2069DF1297B296200D3C627 /* SceneDelegate.swift */,
 				A2069DF3297B296200D3C627 /* ViewController.swift */,
+				A240E7852986AE5500C07856 /* VCTwo.swift */,
 				A2069DF5297B296200D3C627 /* Main.storyboard */,
 				A240E78229867CB500C07856 /* closedEye.png */,
 				A240E78129867CB400C07856 /* openEye.png */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2069DF4297B296200D3C627 /* ViewController.swift in Sources */,
+				A240E7862986AE5500C07856 /* VCTwo.swift in Sources */,
 				A2069DF0297B296200D3C627 /* AppDelegate.swift in Sources */,
 				A2069DF2297B296200D3C627 /* SceneDelegate.swift in Sources */,
 			);

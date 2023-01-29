@@ -139,6 +139,7 @@ class ViewController: UIViewController {
         entryButton.layer.cornerRadius = 5
         entryButton.backgroundColor = .systemBlue
         entryButton.frame = CGRect(x: 50, y: 500, width: 280, height: 45)
+        entryButton.addTarget(self, action: #selector(transitionVC(sender:)), for: .touchUpInside)
         view.addSubview(entryButton)
     }
     
@@ -148,6 +149,14 @@ class ViewController: UIViewController {
         togglePasswordVisibilityButton.frame = CGRect(x: 280, y: 365, width: 20, height: 20)
         view.addSubview(togglePasswordVisibilityButton)
         
+    }
+    //MARK: - Method instantiateViewController
+    @objc func transitionVC(sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let newVC = storyBoard.instantiateViewController(identifier: "VCTwo") as? VCTwo {
+            newVC.modalPresentationStyle = .fullScreen
+            show(newVC, sender: nil)
+        }
     }
     
 }
