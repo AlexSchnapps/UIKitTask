@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     let faceIDLabel = UILabel()
     let loginTextfield = UITextField()
     let passwordTextfield = UITextField()
-    let entryButton = UIButton()
+    var entryButton = UIButton()
     let faceIDSwitch = UISwitch()
     
     
@@ -56,6 +56,9 @@ class ViewController: UIViewController {
         createLoginTextfield()
         createPasswordLabel()
         createPasswordTextfield()
+        createFaceIDLabel()
+        createFaceIDSwitch()
+        createEntryButton()
     }
     //MARK: - Methods
     private func createTopLabel() {
@@ -113,6 +116,29 @@ class ViewController: UIViewController {
         view.addSubview(passwordTextfield)
     }
     
+    private func createFaceIDLabel() {
+        faceIDLabel.text = "Вход по Face ID"
+        faceIDLabel.frame = CGRect(x: 130, y: 430, width: 150, height: 30)
+        faceIDLabel.font = .systemFont(ofSize: 14, weight: .semibold)
+        view.addSubview(faceIDLabel)
+    }
+    
+    private func createFaceIDSwitch() {
+        faceIDSwitch.frame = CGRect(x: 260, y: 430, width: 0, height: 0)
+        faceIDSwitch.isOn = true
+        view.addSubview(faceIDSwitch)
+    }
+    
+    private func createEntryButton() {
+        entryButton.setTitle("Войти", for: .normal)
+        entryButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
+        entryButton.titleLabel?.textAlignment = .center
+        entryButton.alpha = 0.5
+        entryButton.layer.cornerRadius = 5
+        entryButton.backgroundColor = .systemBlue
+        entryButton.frame = CGRect(x: 50, y: 500, width: 280, height: 45)
+        view.addSubview(entryButton)
+    }
 }
 
 
