@@ -144,9 +144,9 @@ class ViewController: UIViewController {
     }
     
     private func createTogglePasswordVisibilityButton() {
-        togglePasswordVisibilityButton.setImage(UIImage(named: "closedEye.png"), for: .normal)
-        togglePasswordVisibilityButton.setImage((UIImage(named: "openEye.png")), for: .highlighted)
+        togglePasswordVisibilityButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
         togglePasswordVisibilityButton.frame = CGRect(x: 280, y: 365, width: 20, height: 20)
+        togglePasswordVisibilityButton.addTarget(self, action: #selector(toggleSecureText(sender: )), for: .touchUpInside)
         view.addSubview(togglePasswordVisibilityButton)
         
     }
@@ -157,6 +157,20 @@ class ViewController: UIViewController {
             newVC.modalPresentationStyle = .fullScreen
             show(newVC, sender: nil)
         }
+    }
+    
+    @objc func toggleSecureText(sender: UIButton) {
+        
+        passwordTextfield.isSecureTextEntry.toggle()
+        
+        if passwordTextfield.isSecureTextEntry == true { togglePasswordVisibilityButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+            
+        } else {
+            
+            togglePasswordVisibilityButton.setImage((UIImage(systemName: "eye")), for: .normal)
+            
+        }
+        
     }
     
 }
