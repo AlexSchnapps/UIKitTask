@@ -24,6 +24,9 @@ class VCTwo: UIViewController {
         createAddUserButton()
         createBackButton()
         createUserAvatarImage()
+        createUserNameLabel()
+        createUserBirthdayDateLabel()
+        createDaysLeftLabel()
     }
     
     private func createAddUserButton() {
@@ -45,7 +48,7 @@ class VCTwo: UIViewController {
         topLabel.text = "Birthday"
         topLabel.textAlignment = .center
         topLabel.font = .systemFont(ofSize: 16, weight: .semibold)
-        topLabel.frame = CGRect(x: 140, y: 35, width: 100, height: 30)
+        topLabel.frame = CGRect(x: 125, y: 35, width: 125, height: 30)
         view.addSubview(topLabel)
     }
     
@@ -70,6 +73,29 @@ class VCTwo: UIViewController {
        let userAvatarImageView = UIImageView(image: userAvatarImage)
         userAvatarImageView.frame = CGRect(x: 15, y: 100, width: 60, height: 60)
         view.addSubview(userAvatarImageView)
+    }
+    
+    private func createUserNameLabel() {
+        userNameLabel.text = "Jeremy"
+        userNameLabel.font = .systemFont(ofSize: 16, weight: .semibold)
+        userNameLabel.frame = CGRect(x: 80, y: 100, width: 100, height: 31)
+        view.addSubview(userNameLabel)
+    }
+    
+    private func createUserBirthdayDateLabel() {
+        userBirthdayDateLabel.text = "10 марта, в среду исполнится 25 лет"
+        userBirthdayDateLabel.font = .systemFont(ofSize: 14)
+        userBirthdayDateLabel.textColor = .lightGray
+        userBirthdayDateLabel.frame = CGRect(x: 80, y: 125, width: 250, height: 31)
+        view.addSubview(userBirthdayDateLabel)
+    }
+    
+    private func createDaysLeftLabel() {
+        daysLeftLabel.text = "18 дней"
+        daysLeftLabel.textColor = .lightGray
+        daysLeftLabel.font = .systemFont(ofSize: 16)
+        daysLeftLabel.frame = CGRect(x: 270, y: 100, width: 100, height: 31)
+        view.addSubview(daysLeftLabel)
     }
     
 }
