@@ -12,6 +12,10 @@ class VCTwo: UIViewController {
     let topLabel = UILabel()
     let addUserButton = UIButton()
     let backButton  = UIButton()
+    let userNameLabel = UILabel()
+    var userAvatarImage = UIImage()
+    let userBirthdayDateLabel = UILabel()
+    let daysLeftLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +23,7 @@ class VCTwo: UIViewController {
         createTopLabel()
         createAddUserButton()
         createBackButton()
+        createUserAvatarImage()
     }
     
     private func createAddUserButton() {
@@ -60,6 +65,12 @@ class VCTwo: UIViewController {
         }
     }
     
+    private func createUserAvatarImage() {
+        userAvatarImage = UIImage(named: "Avatar.jpg")!
+       let userAvatarImageView = UIImageView(image: userAvatarImage)
+        userAvatarImageView.frame = CGRect(x: 15, y: 100, width: 60, height: 60)
+        view.addSubview(userAvatarImageView)
+    }
+    
 }
 
-//chevron.backward

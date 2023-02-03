@@ -17,6 +17,7 @@
 		A240E78429867CB500C07856 /* closedEye.png in Resources */ = {isa = PBXBuildFile; fileRef = A240E78229867CB500C07856 /* closedEye.png */; };
 		A240E7862986AE5500C07856 /* VCTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A240E7852986AE5500C07856 /* VCTwo.swift */; };
 		A2C2BFC92989B24200C9612A /* VCThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2BFC82989B24200C9612A /* VCThree.swift */; };
+		A2E7D881298D234700DFAFD4 /* Avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2E7D880298D234700DFAFD4 /* Avatar.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A240E78229867CB500C07856 /* closedEye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closedEye.png; sourceTree = "<group>"; };
 		A240E7852986AE5500C07856 /* VCTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTwo.swift; sourceTree = "<group>"; };
 		A2C2BFC82989B24200C9612A /* VCThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCThree.swift; sourceTree = "<group>"; };
+		A2E7D880298D234700DFAFD4 /* Avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Avatar.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				A2069DF5297B296200D3C627 /* Main.storyboard */,
 				A240E78229867CB500C07856 /* closedEye.png */,
 				A240E78129867CB400C07856 /* openEye.png */,
+				A2E7D880298D234700DFAFD4 /* Avatar.jpg */,
 				A2069DF8297B296300D3C627 /* Assets.xcassets */,
 				A2069DFA297B296300D3C627 /* LaunchScreen.storyboard */,
 				A2069DFD297B296300D3C627 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E7D881298D234700DFAFD4 /* Avatar.jpg in Resources */,
 				A2069DFC297B296300D3C627 /* LaunchScreen.storyboard in Resources */,
 				A2069DF9297B296300D3C627 /* Assets.xcassets in Resources */,
 				A240E78429867CB500C07856 /* closedEye.png in Resources */,
