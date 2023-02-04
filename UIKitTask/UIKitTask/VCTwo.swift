@@ -63,7 +63,6 @@ class VCTwo: UIViewController {
     @objc func goToVCThree(sender: UIButton) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let instantiVC = storyBoard.instantiateViewController(identifier: "VCThree") as? VCThree {
-            instantiVC.modalPresentationStyle = .fullScreen
             show(instantiVC, sender: nil)
         }
     }
