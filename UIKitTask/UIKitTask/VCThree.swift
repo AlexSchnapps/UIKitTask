@@ -12,7 +12,7 @@ class VCThree: UIViewController {
     let addButton = UIButton()
     let cancellButton = UIButton()
     var avatarImage = UIImage()
-    let anyLabel = UILabel()
+    let changePhotoButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,7 @@ class VCThree: UIViewController {
         addButtonCreate()
         cancellButtonCreate()
         avatarImageCreate()
+        changePhotoButtonCreate()
     }
     
     private func addButtonCreate() {
@@ -45,8 +46,16 @@ class VCThree: UIViewController {
     private func avatarImageCreate() {
         avatarImage = UIImage(named: "Avatar.jpg")!
       let avatarImageView = UIImageView(image: avatarImage)
-        avatarImageView.frame = CGRect(x: 120, y: 80, width: 150, height: 150)
+        avatarImageView.frame = CGRect(x: 110, y: 50, width: 130, height: 130)
         view.addSubview(avatarImageView)
+    }
+    
+    private func changePhotoButtonCreate() {
+        changePhotoButton.setTitle("Изменить фото", for: .normal)
+        changePhotoButton.setTitleColor(.systemBlue, for: .normal)
+        changePhotoButton.titleLabel?.textAlignment = .center
+        changePhotoButton.frame = CGRect(x: 80, y: 180, width: 200, height: 31)
+        view.addSubview(changePhotoButton)
     }
     
     //MARK: - @ojc func
