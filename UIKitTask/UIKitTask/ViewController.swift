@@ -43,8 +43,9 @@ class ViewController: UIViewController {
     let faceIDLabel = UILabel()
     let loginTextfield = UITextField()
     let passwordTextfield = UITextField()
-    let entryButton = UIButton()
+    var entryButton = UIButton()
     let faceIDSwitch = UISwitch()
+    let togglePasswordVisibilityButton = UIButton()
     
     
     
@@ -56,6 +57,10 @@ class ViewController: UIViewController {
         createLoginTextfield()
         createPasswordLabel()
         createPasswordTextfield()
+        createFaceIDLabel()
+        createFaceIDSwitch()
+        createEntryButton()
+        createTogglePasswordVisibilityButton()
     }
     //MARK: - Methods
     private func createTopLabel() {
@@ -111,6 +116,61 @@ class ViewController: UIViewController {
         passwordTextfield.frame = CGRect(x: 45, y: 350, width: 270, height: 45)
         passwordTextfield.addLine(position: .bottom, color: .lightGray, width: 1.5)
         view.addSubview(passwordTextfield)
+    }
+    
+    private func createFaceIDLabel() {
+        faceIDLabel.text = "Вход по Face ID"
+        faceIDLabel.frame = CGRect(x: 130, y: 430, width: 150, height: 30)
+        faceIDLabel.font = .systemFont(ofSize: 14, weight: .semibold)
+        view.addSubview(faceIDLabel)
+    }
+    
+    private func createFaceIDSwitch() {
+        faceIDSwitch.frame = CGRect(x: 260, y: 430, width: 0, height: 0)
+        faceIDSwitch.isOn = true
+        view.addSubview(faceIDSwitch)
+    }
+    
+    private func createEntryButton() {
+        entryButton.setTitle("Войти", for: .normal)
+        entryButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
+        entryButton.titleLabel?.textAlignment = .center
+        entryButton.alpha = 0.5
+        entryButton.layer.cornerRadius = 5
+        entryButton.backgroundColor = .systemBlue
+        entryButton.frame = CGRect(x: 50, y: 500, width: 280, height: 45)
+        entryButton.addTarget(self, action: #selector(transitionVC(sender:)), for: .touchUpInside)
+        view.addSubview(entryButton)
+    }
+    
+    private func createTogglePasswordVisibilityButton() {
+        togglePasswordVisibilityButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        togglePasswordVisibilityButton.frame = CGRect(x: 280, y: 365, width: 20, height: 20)
+        togglePasswordVisibilityButton.addTarget(self, action: #selector(toggleSecureText(sender: )), for: .touchUpInside)
+        view.addSubview(togglePasswordVisibilityButton)
+        
+    }
+    //MARK: - Method instantiateViewController
+    @objc func transitionVC(sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let newVC = storyBoard.instantiateViewController(identifier: "VCTwo") as? VCTwo {
+            newVC.modalPresentationStyle = .fullScreen
+            show(newVC, sender: nil)
+        }
+    }
+    
+    @objc func toggleSecureText(sender: UIButton) {
+        
+        passwordTextfield.isSecureTextEntry.toggle()
+        
+        if passwordTextfield.isSecureTextEntry == true { togglePasswordVisibilityButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+            
+        } else {
+            
+            togglePasswordVisibilityButton.setImage((UIImage(systemName: "eye")), for: .normal)
+            
+        }
+        
     }
     
 }
