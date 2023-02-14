@@ -8,26 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     var displaySecondButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "FirstVC"
+        title = "FirstVC"
+        
+        displaySecondButton = UIButton(type: .system)
+        displaySecondButton.setTitle("SecondVC", for: .normal)
+        displaySecondButton.sizeToFit()
+        displaySecondButton.center = view.center
+        displaySecondButton.addTarget(self, action: #selector(performDisplaySecondVC), for: .touchUpInside)
+        view.addSubview(displaySecondButton)
+    }
     
-        self.displaySecondButton = UIButton(type: .system)
-        self.displaySecondButton.setTitle("SecondVC", for: .normal)
-        self.displaySecondButton.sizeToFit()
-        self.displaySecondButton.center = self.view.center
-        self.displaySecondButton.addTarget(self, action: #selector(performDisplaySecondVC), for: .touchUpInside)
-        self.view.addSubview(self.displaySecondButton)
-    }
-
-    @objc func performDisplaySecondVC(parametrSender: Any) {
+    @objc func performDisplaySecondVC() {
         let secondVC = SecondViewController()
-        self.navigationController?.pushViewController(secondVC, animated: true)
+        navigationController?.pushViewController(secondVC, animated: true)
     }
-
 }
 
