@@ -9,13 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var displaySecondButton = UIButton()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "FirstVC"
+        self.navigationItem.title = "FirstVC"
         
+        createButton()
+    }
+    
+    func createButton() {
+        var displaySecondButton = UIButton()
         displaySecondButton = UIButton(type: .system)
         displaySecondButton.setTitle("SecondVC", for: .normal)
         displaySecondButton.sizeToFit()
