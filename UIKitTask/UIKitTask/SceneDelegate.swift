@@ -13,8 +13,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-     
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let mainVC = ViewController()
+        let navController = UINavigationController(rootViewController: mainVC)
+        window?.rootViewController = navController
+        window?.backgroundColor = UIColor.white
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
