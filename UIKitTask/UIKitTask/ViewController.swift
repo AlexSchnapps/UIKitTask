@@ -12,7 +12,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "FirstVC"
+        navigationItem.title = "FirstVC"
+        
+        var tabBarItem = UITabBarItem()
+        tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
+        self.tabBarItem = tabBarItem
+        
         view.backgroundColor = .green
     }
 
