@@ -13,7 +13,7 @@ class secondViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "SecondVC"
-    
+        view.backgroundColor = .blue
     }
     
 

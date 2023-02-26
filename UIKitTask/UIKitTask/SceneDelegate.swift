@@ -21,11 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let firstVC = ViewController()
             let secondVC = secondViewController()
             
+
             //MARK: - Navigation
             let firstNavController = UINavigationController(rootViewController: firstVC)
             let secondNavController = UINavigationController(rootViewController: secondVC)
+            
+            //MARK: - TabBarController
             let tabBarVC = UITabBarController()
-            tabBarVC.setViewControllers([firstVC, secondVC], animated: true)
+            tabBarVC.setViewControllers([firstNavController, secondNavController], animated: true)
             window.rootViewController = tabBarVC
             window.backgroundColor = .white
             
@@ -34,28 +37,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
-        }
-        
-        func sceneDidDisconnect(_ scene: UIScene) {
-            
-        }
-        
-        func sceneDidBecomeActive(_ scene: UIScene) {
-            
-        }
-        
-        func sceneWillResignActive(_ scene: UIScene) {
-            
-        }
-        
-        func sceneWillEnterForeground(_ scene: UIScene) {
-            
-        }
-        
-        func sceneDidEnterBackground(_ scene: UIScene) {
-            
-        }
-        
+    }
+    
+    func sceneDidDisconnect(_ scene: UIScene) {
         
     }
     
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        
+    }
+    
+    func sceneWillResignActive(_ scene: UIScene) {
+        
+    }
+    
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        
+    }
+    
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        
+    }
+    
+    
+}
+
