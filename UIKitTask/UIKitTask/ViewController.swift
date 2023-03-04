@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         
         createTextView()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTextView(param:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTextView(param:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     }
     
 //MARK: - Methods
@@ -34,11 +37,21 @@ class ViewController: UIViewController {
         self.myTextView.backgroundColor = .white
     }
     
-    func updateTextView(param: Notification) {
+  @objc func updateTextView(param: Notification) {
         let userInfo = param.userInfo
         
         let getKeyboardRect = (userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let keyboardFrame = self.view.convert(getKeyboardRect, to: view.window)
+        
+        if param.name == UIResponder.keyboardWillHideNotification {
+            myTextView.contentInset = UIEdgeInsets.zero
+        } else {
+            myTextView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardFrame.height, right: 0)
+            myTextView.scrollIndicatorInsets = myTextView.contentInset
+        }
+        
+        myTextView.scrollRangeToVisible(myTextView.selectedRange)
+        
     }
     
 }
