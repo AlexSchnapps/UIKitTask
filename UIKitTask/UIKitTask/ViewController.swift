@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         myImageView.layer.borderWidth = 2
+        myImageView.layer.borderColor = UIColor.lightGray.cgColor
+        myImageView.layer.cornerRadius = 50
+        myImageView.clipsToBounds = true
         
         
     }
