@@ -9,8 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var myImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myImageView.layer.borderWidth = 2
+        
+        
     }
 }
 
