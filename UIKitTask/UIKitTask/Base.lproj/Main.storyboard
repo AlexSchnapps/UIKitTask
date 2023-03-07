@@ -47,17 +47,23 @@
                                 </items>
                                 <color key="barTintColor" systemColor="systemBlueColor"/>
                             </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-AF-4GZ">
+                                <rect key="frame" x="186" y="428" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qXO-kw-94L" secondAttribute="trailing" id="E2W-DP-1DL"/>
                             <constraint firstItem="qXO-kw-94L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JbL-8k-SZB"/>
+                            <constraint firstItem="Bgf-AF-4GZ" firstAttribute="centerY" secondItem="qXO-kw-94L" secondAttribute="centerY" id="OqB-jP-gQ7"/>
                             <constraint firstItem="qXO-kw-94L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tma-UY-c3R"/>
                             <constraint firstItem="qXO-kw-94L" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZUo-N4-jRW"/>
+                            <constraint firstItem="Bgf-AF-4GZ" firstAttribute="centerX" secondItem="qXO-kw-94L" secondAttribute="centerX" id="he8-T6-QA9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Bgf-AF-4GZ" id="y8f-EU-GJL"/>
                         <outlet property="goBackItem" destination="br1-NZ-BzN" id="DJ4-LX-0J2"/>
                         <outlet property="goForwardItem" destination="1M7-xB-Zpc" id="lSS-qn-15i"/>
                         <outlet property="myWebView" destination="qXO-kw-94L" id="03r-Bt-3Ka"/>
