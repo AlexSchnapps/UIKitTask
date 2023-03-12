@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        let vc = ViewController()
-        let navController = UINavigationController(rootViewController: vc)
+        let pageVC = myPageViewController()
+        let navController = UINavigationController(rootViewController: pageVC)
         self.window?.rootViewController = navController
         self.window?.backgroundColor = UIColor.white
         self.window?.makeKeyAndVisible()

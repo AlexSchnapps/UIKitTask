@@ -13,6 +13,7 @@
 		A2069DF7297B296200D3C627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2069DF5297B296200D3C627 /* Main.storyboard */; };
 		A2069DF9297B296300D3C627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2069DF8297B296300D3C627 /* Assets.xcassets */; };
 		A2069DFC297B296300D3C627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2069DFA297B296300D3C627 /* LaunchScreen.storyboard */; };
+		A28F4DFF29BE0B100041D846 /* myPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28F4DFE29BE0B0F0041D846 /* myPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A2069DF8297B296300D3C627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2069DFB297B296300D3C627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2069DFD297B296300D3C627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A28F4DFE29BE0B0F0041D846 /* myPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		A2069DEE297B296200D3C627 /* UIKitTask */ = {
 			isa = PBXGroup;
 			children = (
+				A28F4E0029BE0B2B0041D846 /* PaageVC */,
 				A2069DEF297B296200D3C627 /* AppDelegate.swift */,
 				A2069DF1297B296200D3C627 /* SceneDelegate.swift */,
 				A2069DF3297B296200D3C627 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				A2069DFD297B296300D3C627 /* Info.plist */,
 			);
 			path = UIKitTask;
+			sourceTree = "<group>";
+		};
+		A28F4E0029BE0B2B0041D846 /* PaageVC */ = {
+			isa = PBXGroup;
+			children = (
+				A28F4DFE29BE0B0F0041D846 /* myPageViewController.swift */,
+			);
+			path = PaageVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 				A2069DF4297B296200D3C627 /* ViewController.swift in Sources */,
 				A2069DF0297B296200D3C627 /* AppDelegate.swift in Sources */,
 				A2069DF2297B296200D3C627 /* SceneDelegate.swift in Sources */,
+				A28F4DFF29BE0B100041D846 /* myPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
