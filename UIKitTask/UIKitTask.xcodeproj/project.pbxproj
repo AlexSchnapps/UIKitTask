@@ -15,6 +15,7 @@
 		A2069DFC297B296300D3C627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2069DFA297B296300D3C627 /* LaunchScreen.storyboard */; };
 		A28F4DFF29BE0B100041D846 /* myPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28F4DFE29BE0B0F0041D846 /* myPageViewController.swift */; };
 		A28F4E0229BE0EEF0041D846 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28F4E0129BE0EEF0041D846 /* CarViewController.swift */; };
+		A28F4E0529BE2B370041D846 /* CarsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28F4E0429BE2B370041D846 /* CarsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A2069DFD297B296300D3C627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A28F4DFE29BE0B0F0041D846 /* myPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPageViewController.swift; sourceTree = "<group>"; };
 		A28F4E0129BE0EEF0041D846 /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
+		A28F4E0429BE2B370041D846 /* CarsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				A28F4E0329BE0F350041D846 /* VC */,
 				A28F4E0029BE0B2B0041D846 /* PaageVC */,
+				A28F4E0429BE2B370041D846 /* CarsHelper.swift */,
 				A2069DEF297B296200D3C627 /* AppDelegate.swift */,
 				A2069DF1297B296200D3C627 /* SceneDelegate.swift */,
 				A2069DF5297B296200D3C627 /* Main.storyboard */,
@@ -164,6 +167,7 @@
 				A2069DF4297B296200D3C627 /* ViewController.swift in Sources */,
 				A2069DF0297B296200D3C627 /* AppDelegate.swift in Sources */,
 				A2069DF2297B296200D3C627 /* SceneDelegate.swift in Sources */,
+				A28F4E0529BE2B370041D846 /* CarsHelper.swift in Sources */,
 				A28F4DFF29BE0B100041D846 /* myPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
