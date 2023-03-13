@@ -14,71 +14,59 @@ class ViewController: UIViewController {
     //UIPushBehavior - реакции на толчки
     //UISnapBehavior - крепит view к определенной точке
     
-    var squareViews = [UIDynamicItem]()
+    var squareView = UIView()
     var animator = UIDynamicAnimator()
+    var pushBehavior = UIPushBehavior()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
-        //MARK: - create View
-        let numberOfView = 2
-        squareViews.reserveCapacity(numberOfView)
-        var colors = [UIColor.red, UIColor.green]
-        var currentCenterPoint: CGPoint = view.center
-        let eachViewSize = CGSize(width: 50, height: 50)
-        
-        for counter in 0..<numberOfView {
-            let newView = UIView(frame: CGRect(x: 0, y: 0, width: eachViewSize.width, height: eachViewSize.height))
-            newView.backgroundColor = colors[counter]
-            newView.center = currentCenterPoint
-            currentCenterPoint.y += eachViewSize.height + 10
-            view.addSubview(newView)
-            squareViews.append(newView)
-        }
-        
+        createGestureRecognazer()
+        createSmallSquerView()
+        createAnimationAndBehaviors()
+    }
+    //MARK: - Create square
+    func createSmallSquerView() {
+        squareView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+        squareView.backgroundColor = .green
+        squareView.center = view.center
+        view.addSubview(squareView)
+    }
+    //MARK: - create gesture (жест)
+    func createGestureRecognazer() {
+        let tapGestureRecognazer = UITapGestureRecognizer(target: self, action: #selector(hendleTap(paramTap:)))
+        view.addGestureRecognizer(tapGestureRecognazer)
+    }
+    
+    //MARK: - create collision(столкновение)
+    
+    func createAnimationAndBehaviors() {
         animator = UIDynamicAnimator(referenceView: view)
-        
-        //MARK: - create gravity
-        let gravity = UIGravityBehavior(items: squareViews)
-        animator.addBehavior(gravity)
-        
-        //MARK: - Create collision
-        let collision = UICollisionBehavior(items: squareViews)
-        // метод останавливает объекты на нижней границе
+        //столкновение
+        let collision = UICollisionBehavior(items: [squareView])
         collision.translatesReferenceBoundsIntoBoundary = true
-        
-        collision.addBoundary(withIdentifier: "bottomBoundary" as NSCopying, from: CGPoint(x: 0, y: view.bounds.size.height - 100),to: CGPoint(x: view.bounds.size.width, y: view.bounds.size.height - 100))
-        
-        collision.collisionDelegate = self
+        pushBehavior = UIPushBehavior(items: [squareView], mode: .continuous)
         animator.addBehavior(collision)
-    
+        animator.addBehavior(pushBehavior)
     }
     
-    
-    
-}
-
-extension ViewController: UICollisionBehaviorDelegate {
-    func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?, at p: CGPoint) {
-        let identifier = identifier as? String
-        let newBottomBoundary = "bottomBoundary"
-        if identifier == newBottomBoundary {
-            UIView.animate(withDuration: 1.0, animations: {
-                let view = item as? UIView
-                view?.backgroundColor = .red
-                view?.alpha = 0.0
-                view?.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
-            }, completion: {(finished) in
-                let view = item as? UIView
-                behavior.removeItem(item)
-                view?.removeFromSuperview()
-            })
-        }
+    @objc func hendleTap(paramTap: UITapGestureRecognizer) {
+        // угол View
+        let tapPoint: CGPoint = paramTap.location(in: view)
+        let squareViewCenterPoint: CGPoint = squareView.center
+        
+        //arc tangent 2((p1.x - p2.x), (p1.y - p2.y))
+        let deltaX: CGFloat = tapPoint.x - squareViewCenterPoint.x
+        let deltaY: CGFloat = tapPoint.y - squareViewCenterPoint.y
+        let angle: CGFloat = atan2(deltaY, deltaX)
+        pushBehavior.angle = angle
+        
+        let distanceBetweenPints: CGFloat = sqrt(pow(tapPoint.x - squareViewCenterPoint.x, 2.0) + pow(tapPoint.y - squareViewCenterPoint.y, 2.0))
+        pushBehavior.magnitude = distanceBetweenPints / 200
     }
+    
 }
 
